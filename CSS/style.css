@@ -1,0 +1,33 @@
+body {
+
+    min-height: 100vh;
+    margin: 0
+
+}
+
+header {
+margin-bottom: 100px;
+    
+}
+
+
+.tablinks {
+
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+    float: left;
+}
+
+h1 {
+
+    text-align: center;
+
+}
+
+.tabcontent {
+
+    background-color: lightblue;
+    padding: 100px 20px;
+    min-height: 100vh;
+  }
