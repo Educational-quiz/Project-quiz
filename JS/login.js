@@ -19,6 +19,7 @@ $(function () {
     var users = getLocalStorageItem("users") || []; //retrives the user data from local storage or set value to empty array if user doesn't exist
     users.push(user); //push our user inside the array
     setLocalStorageItem("users", users); //store the array user inside the local storage
+    alert("successfully Signed Up");
     window.location.href = "SignIn.html"; //redirect as to signIn html page
   });
   loginForm.on("submit", function (event) {
@@ -30,6 +31,7 @@ $(function () {
     var user = findUser(users, email, password); //verify if our user exist
 
     if (user) {
+      alert("successfully Signed In")
       window.location.href = "../HTML/Home.html"; //redirect as to home html page
     } else {
       alert("Invalid Email or password");
