@@ -40,7 +40,7 @@ function checkLimit() {
 
 $('.subjects .questions').on('click', '.box', checkLimit)
 
-
+$('.popup').hide()
 var i = 1
 function submitSwitch() {
     var arr = $('.subjects')
@@ -52,7 +52,7 @@ function submitSwitch() {
     }
 
 
-    else window.location.replace("Home.html")
+    else $('.popup').fadeIn('slow')
 
     i++
 
@@ -70,17 +70,19 @@ function disableSelected() {
 
 $('.tablinks').on('click', disableSelected)
 
-$('.subButton').attr('disabled',true)
+$('.subButton').attr('disabled', true)
 
 
-$('.subjects').on('click','.box',function checkChecks () {
-    var subID=($(this).parent().parent().parent().parent().parent().attr('id'))
-     subID2=subID.toLowerCase()
-     console.log(subID)
-     if ($('#'+subID+' .box:checked').length===4){
-          $('#'+subID2+'Sub').attr('disabled',false)
-        }
+$('.subjects').on('click', '.box', function checkChecks() {
+    var subID = ($(this).parent().parent().parent().parent().parent().attr('id'))
+    subID2 = subID.toLowerCase()
+    console.log(subID)
+    if ($('#' + subID + ' .box:checked').length === 4) {
+        $('#' + subID2 + 'Sub').attr('disabled', false)
+    }
 
-    
-    })
+
+})
+
+
 
