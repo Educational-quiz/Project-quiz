@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src ='../jQuery/code.jquery.com_jquery-3.7.0.js'> </script>>
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../jQuery/code.jquery.com_jquery-3.7.0.js"></script>
+    <title>Sign Up</title>
 </head>
 <body>
-    <div class="signUp">
-        <form name="formSignUp" id="signUpForm">
-            <h1> SIGN UP </h1>
-
-            <label for="firstName">Name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="Email" name="email" placeholder="Email" required>
-
-            <label for="psw">Password</label>
-            <input type="password" id="Psw" name="Psw" placeholder="Password" required >
-
-            <input type="submit" value="Sign Up">
-
-        </form>
+    <div class="container">
+        <div class="signUp">
+            <h1 class="signUpHeader">Sign Up</h1>
+            <form name="formSignUp" id="signUpForm">
+                <div class="input">
+                    <label for="firstName">Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="input">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="input">
+                    <label for="email">Email:</label>
+                    <input type="email" id="Email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input">
+                    <label for="psw">Password:</label>
+                    <input type="password" id="Psw" name="Psw" placeholder="Password" required>
+                </div>
+                <div class="input">
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+        </div>
     </div>
-    <script src ="../JS/login.js"></script>  
+    <script src="../JS/login.js"></script>
 </body>
 </html>
