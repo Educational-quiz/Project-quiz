@@ -61,8 +61,6 @@ function submitSwitch() {
 
 $('.subjects').on('click', '.subButton', submitSwitch)
 
-
-
 function disableSelected() {
     $(this).attr('disabled', true)
 }
@@ -83,6 +81,3 @@ $('.subjects').on('click', '.box', function checkChecks() {
 
 
 })
-
-
-
