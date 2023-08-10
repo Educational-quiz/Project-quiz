@@ -21,15 +21,42 @@ var z=(list.parent())
 
 
     $('#'+e+' .box').not(this).prop('checked', false);
+
+    
 })
 
 
-//$(this).attr('disabled', true)
+var i=1
+$('.subjects').on('click', '.subButton', function (){
+    var arr= $('.subjects')
 
-//$('.box').on('click', function () {
+    	if ( i<arr.length&&$(this).parent().attr('id')!==(arr[i].id)){  
 
-//var list=($(this).parent())
-//var z=  (list.parent())
- //console.log(z.parent().attr('id'))
+            $('.'+arr[i].id).click()
+            
+}      
+   
+        
+ else  	window.location.replace("Home.html")
+   
+   i++
+        
+    })
 
-// })
+
+
+
+    $('.tablinks').on('click', function(){
+        $(this).attr('disabled', true)
+    })
+    
+
+function checkChecks () {
+
+    if ($('.box:checked').length<4){
+        $('subButton').attr('disabled',true)
+    }
+}
+
+
+$('.subjects').on('click','tablinks',checkChecks)
