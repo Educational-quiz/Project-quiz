@@ -1,3 +1,5 @@
+
+
 $(function () {
   var loginForm = $("#loginForm"); //assign HTML login form to variable loginForm
   var signupForm = $("#signUpForm"); //assign HTML signUp form to variable signupForm
@@ -15,6 +17,12 @@ $(function () {
       lastName: lastName,
       email: email,
       password: password,
+      mathScore:0,
+      englishScore:0,
+      geographyScore:0,
+      scienceScore:0,
+      historyScore:0,
+      totalScore: 0
     };
     var users = getLocalStorageItem("users") || []; //retrives the user data from local storage or set value to empty array if user doesn't exist
     users.push(user); //push our user inside the array
@@ -50,9 +58,11 @@ $(function () {
     for (var index = 0; index < users.length; index++) {
       //the keys if the exist in the user object
       if (users[index].email === email && users[index].password === password) {
+        localStorage.setItem('currentUser', JSON.stringify(index))
         return users[index];
       }
     }
     return null; //indicates that user was not found to display error message
   }
 });
+ 
