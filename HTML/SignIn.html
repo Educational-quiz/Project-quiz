@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ='../jQuery/code.jquery.com_jquery-3.7.0.js'> </script>
     <title>Document</title>
 </head>
 <body>
     <div class="login">
-        <form name="formLogin">
+        <form name="formLogin" id="loginForm">
             <h1> SIGN IN </h1>
 
             <label for="email">Email:</label>
@@ -17,12 +18,15 @@
             <input type="password" id="psw" name="psw" placeholder="Password" required >
 
             <div id="remember">
-                <input type="checkbox" value="rememberMe" id="'rememberMe">
+                <input type="checkbox" value="rememberMe" id="rememberMe">
+                <label>Remember Me</label>
             </div>
 
-            <input id="login_btn" type="submit" value="login">
+            <input type="submit" value="login">
 
         </form>
-    </div>  
+        <p>Don't have an account? <a href="signUp.html">Sign Up</a> here</p>
+    </div>
+    <script src ="../JS/login.js"></script>   
 </body>
 </html>
