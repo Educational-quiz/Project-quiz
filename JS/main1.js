@@ -1,11 +1,6 @@
-$(".subjects").hide();
 
-$(document).ready(function () {
-  $("#M").click();
-});
 
-$(".tablinks").on("click", function () {
-  var pageName = $(this).text();
+$('.subjects').hide()
 
 function defaultClick() {
     $('#M').click()
@@ -86,14 +81,5 @@ $('.subjects').on('click', '.box', function checkChecks() {
         $('#' + subID2 + 'Sub').attr('disabled', false)
     }
 
-var i = 1;
-$(".subjects").on("click", ".subButton", function () {
-  var arr = $(".subjects");
 
-  if (i < arr.length && $(this).parent().attr("id") !== arr[i].id) {
-    $("." + arr[i].id).click();
-  } else window.location.replace("Home.html");
-
-  i++;
-});
-
+})
