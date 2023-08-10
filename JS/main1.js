@@ -1,4 +1,9 @@
 
+var mathCount = 0
+var englishCount = 0
+var gerographyCount = 0
+var scienceCount = 0
+var historyCount = 0
 
 $('.subjects').hide()
 
@@ -41,9 +46,16 @@ function checkLimit() {
 $('.subjects .questions').on('click', '.box', checkLimit)
 
 $('.popup').hide()
+
+var users = getLocalStorageItem("users") || []
+function getLocalStorageItem(key) {
+    return JSON.parse(localStorage.getItem(key));
+}
+
 var i = 1
 function submitSwitch() {
     var arr = $('.subjects')
+    var ID= getLocalStorageItem('currentUser')
 
     if (i < arr.length && $(this).parent().attr('id') !== (arr[i].id)) {
 
@@ -52,7 +64,20 @@ function submitSwitch() {
     }
 
 
-    else $('.popup').fadeIn('slow')
+    else {
+        $('.popup').fadeIn('slow')
+  
+        users[ID].mathScore=mathCount
+        users[ID].englishScore=englishCount
+        users[ID].geographyScore=gerographyCount
+        users[ID].scienceScore=scienceCount
+        users[ID].historyScore=historyCount
+        users[ID].totalScore=(users[ID].mathScore+users[ID].englishScore+users[ID].geographyScore+users[ID].scienceScore+users[ID].historyScore*200)/100
+
+
+
+
+    }
 
     i++
 
@@ -60,8 +85,6 @@ function submitSwitch() {
 
 
 $('.subjects').on('click', '.subButton', submitSwitch)
-
-
 
 function disableSelected() {
     $(this).attr('disabled', true)
@@ -76,7 +99,6 @@ $('.subButton').attr('disabled', true)
 $('.subjects').on('click', '.box', function checkChecks() {
     var subID = ($(this).parent().parent().parent().parent().parent().attr('id'))
     subID2 = subID.toLowerCase()
-    console.log(subID)
     if ($('#' + subID + ' .box:checked').length === 4) {
         $('#' + subID2 + 'Sub').attr('disabled', false)
     }
@@ -84,5 +106,43 @@ $('.subjects').on('click', '.box', function checkChecks() {
 
 })
 
+
+
+
+$('.subjects').on('click', '.box', function () {
+
+
+    if ($(this).attr('class') === 'box math-correct') {
+        mathCount = mathCount + 10
+    }
+    if ($(this).attr('class') === 'box english-correct') {
+        englishCount = englishCount + 10
+    }
+    if ($(this).attr('class') === 'box geography-correct') {
+        gerographyCount = gerographyCount + 10
+    }
+    if ($(this).attr('class') === 'box science-correct') {
+        scienceCount = scienceCount + 10
+    }
+    if ($(this).attr('class') === 'box history-correct') {
+        historyCount = historyCount + 10
+    }
+
+    console.log(mathCount, englishCount, gerographyCount, scienceCount, historyCount)
+
+
+})
+
+
+function getLocalStorageItem(key) {
+    
+    return JSON.parse(localStorage.getItem(key)); 
+}
+
+
+ function setLocalStorageItem(key, value) {
+    //store the value in the local storage from a specific key
+    localStorage.setItem(key, JSON.stringify(value)); //use JSON method to convert the value as on object to a string
+  }
 
 
