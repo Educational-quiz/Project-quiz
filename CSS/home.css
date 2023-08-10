@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif; 
+}
+html, body {
+    margin: 0;
+}
+.full-screen {
+    background-image: url ("../images/quiz.jpg");
+}
