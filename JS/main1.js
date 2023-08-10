@@ -2,6 +2,11 @@
 
 $('.subjects').hide()
 
+$(document).ready(function(){
+    $('#M').click()
+    
+})
+
 $('.tablinks').on('click', function(){
 var pageName = $(this).text()
 
@@ -50,13 +55,14 @@ $('.subjects').on('click', '.subButton', function (){
         $(this).attr('disabled', true)
     })
     
+    
 
-function checkChecks () {
+//function checkChecks () {
 
-    if ($('.box:checked').length<4){
-        $('subButton').attr('disabled',true)
-    }
-}
+  //  if ($('.box:checked').length<4){
+      //  $('subButton').attr('disabled',true)
+    //}
+//}
 
 
-$('.subjects').on('click','tablinks',checkChecks)
+//$('.subjects').on('click','tablinks',checkChecks)
