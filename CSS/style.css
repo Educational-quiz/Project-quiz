@@ -1,12 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif; 
 }
-
+html, body {
+    margin: 0;
+}
+.full-screen {
+    background-image: url("../images/background1.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+}
 .container {
-    max-width: 400px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -16,6 +23,8 @@ body {
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    margin-top: 40%;
+    width: 100%;
 }
 
 .signIn {
@@ -25,8 +34,9 @@ body {
 .signUp {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    margin-top: 40%;
+    width: 100%;
 }
 
 .signUpHeader {
@@ -46,7 +56,7 @@ label {
 
 input[type="email"],
 input[type="password"],
-input[type="password"] {
+input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -54,22 +64,28 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #1D3461;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 250px;
+    margin-top: 10px;
 }
 
 input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+h1 {
+    font-style: italic;
+}
 p {
     font-size: 14px;
     text-align: center;
     margin-top: 20px;
+    font-style: oblique;
 }
 
 
