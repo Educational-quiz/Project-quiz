@@ -79,7 +79,7 @@ function submitSwitch() {
         users[ID].geographyScore = geographyCount + '/40'
         users[ID].scienceScore = scienceCount + '/40'
         
-        var total = ((mathCount + englishCount + geographyCount + scienceCount + historyCount) / 200) * 100
+        var total = ((((mathCount + englishCount + geographyCount + scienceCount + historyCount) / 200) * 100).toFixed(2))*1;
 
 
 

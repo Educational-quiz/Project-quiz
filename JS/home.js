@@ -15,7 +15,7 @@ $(function () {
     }
     for (var i = 0; i < users.length; i++) {
       if(users[i].totalScore !== null) {
-        $("#leaderbordList").append("<li>"+ users[i].firstName + " - Score: " + users[i].totalScore + " %" +"</li>");
+        $("#leaderbordList").append("<li>"+ users[i].username + " - Score: " + users[i].totalScore + " %" +"</li>");
       }
     }
     function getLocalStorageItem(key) {
