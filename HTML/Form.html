@@ -11,399 +11,396 @@
 <body>
 	<div class="full-screen">
 
-	<header>
-		<h1> Take the Quiz </h1>
-	</header>
-	<div class="tab">
-		<button class="tablinks Math" id="M">Math </button>
-		<button class="tablinks English" id="E">English</button>
-		<button class="tablinks Geography" id="G">Geography</button>
-		<button class="tablinks Science" id="S">Science</button>
-		<button class="tablinks History" id="H">History</button>
-	</div>
-	<div class="tabcontent">
-		<div class="subjects" id="Math">
-			<h3 class="quizName"> Math quiz:</h3>
-			<ol class="questionList" id='mathQ'>
-				<li class="questions" id="one"> Question1
-					<ul>
-						<li class="answers">
-							<label class="container">
-							<input type="checkbox" class="box">
-							Answer 1
-							<span class="checkmark"></span>
-						</label>
-						</li>
-						<li class="answers">
-							<label class="container">
+		<header>
+			<h1> Take the Quiz </h1>
+		</header>
+		<div class="tab">
+			<button class="tablinks Math" id="M">Math </button>
+			<button class="tablinks English" id="E">English</button>
+			<button class="tablinks Geography" id="G">Geography</button>
+			<button class="tablinks Science" id="S">Science</button>
+			<button class="tablinks History" id="H">History</button>
+		</div>
+		<div class="tabcontent">
+			<div class="subjects" id="Math">
+				<h3 class="quizName"> Math quiz:</h3>
+				<ol class="questionList" id='mathQ'>
+					<li class="questions" id="one"> What is the sum of 130+125+191?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								335
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box math-correct">
+								446
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								456
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="two"> If we minus 712 from 1500, how much do we get?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								778
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box math-correct">
+								788
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								758
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="three"> What is the next prime number after 5?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box math-correct">
+								7
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								9
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								6
+
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="four"> Solve: 300 – (150×2)
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								150
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box math-correct">
+								0
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								50
+
+							</li>
+						</ul>
+					</li>
+				</ol>
+				<input type="submit" class="subButton" id="mathSub">
+			</div>
+			<div class="subjects" id="English">
+				<h3 class="quizName"> English quiz:</h3>
+				<ol class="questionList" id="EnglishQ">
+					<li class="questions" id="uno"> I don’t know when the term ’hipster’ was ____ , but it has become
+						quite popular lately.
+
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box english-correct">
+								coined
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								carved
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								fabricated
+
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="dos"> Our company receives hundreds of ______ emails every day.
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								unkempt
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box english-correct">
+								unsolicited
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								unrequited
+
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="tres"> My teacher had difficulty ______ my handwriting.
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								to read
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								for reading
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box english-correct">
+								reading
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="quatro"> Although the lunar landing ______, the crew managed to take some
+						invaluable photos of the Moon's surface.
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box english-correct">
+								was aborted
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								was abolished
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								was accomplished
+							</li>
+						</ul>
+					</li>
+				</ol>
+				<input type="submit" class="subButton" id="englishSub">
+			</div>
+			<div class="subjects" id="Geography">
+				<h3 class="quizName"> Geography quiz:</h3>
+				<ol class="questionList" id="GeographyQ">
+					<li class="questions" id="un"> What is the name of the tallest mountain in the world?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Mount Kilimanjaro
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box geography-correct">
+								Mount Everest
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Mount Fuji
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="deux"> Which country has the largest population in the world?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box geography-correct">
+								india
+
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								China
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Russia
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="trois"> What is the name of the longest river in Africa?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Congo River
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box geography-correct">
+								The Nile River
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								The Niger River
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="quatre"> What American city is the Golden Gate Bridge located in?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box geography-correct">
+								San Francisco
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Los Angeles
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								New York
+							</li>
+						</ul>
+					</li>
+				</ol>
+				<input type="submit" class="subButton" id="geographySub">
+			</div>
+			<div class="subjects" id="Science">
+				<h3 class="quizName"> Science quiz:</h3>
+				<ol class="questionList" id="ScienceQ">
+					<li class="questions" id="1"> What is Earth’s only natural satellite?
+
+
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Sun
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Mars
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box science-correct">
+								Moon
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="2"> Which blood type is referred to as the universal donor?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box science-correct">
+								O Negative
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								AB positive
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								B Negative
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="3"> Question3
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Answer 1
+							</li>
+							<li class="answers">
 								<input type="checkbox" class="box">
 								Answer 2
-								<span class="checkmark"></span>
-							</label>
-						</li>
-						<li class="answers">
-							<label class="container">
-								<input type="checkbox" class="box">
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box science-correct">
 								Answer 3
-								<span class="checkmark"></span>
-							</label>
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="two"> Question2
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box math-correct">
-							Answer 2
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-							<span class="checkmark"></span>
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="three"> Question3
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box math-correct">
-							Answer 1
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-							<span class="checkmark"></span>
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="four"> Question4
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box math-correct">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-							<span class="checkmark"></span>
-						</li>
-					</ul>
-				</li>
-			</ol>
-			<input type="submit" class="subButton" id="mathSub">
-		</div>
-		<div class="subjects" id="English">
-			<h3 class="quizName"> English quiz:</h3>
-			<ol class="questionList" id="EnglishQ">
-				<li class="questions" id="uno"> Question1
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box english-correct">
-							Answer 1
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-							<span class="checkmark"></span>
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="dos"> Question2
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box english-correct">
-							Answer 2
-							<span class="checkmark"></span>
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-							<span class="checkmark"></span>
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="tres"> Question3
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box english-correct">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="quatro"> Question4
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box english-correct">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-			</ol>
-			<input type="submit" class="subButton" id="englishSub">
-		</div>
-		<div class="subjects" id="Geography">
-			<h3 class="quizName"> Geography quiz:</h3>
-			<ol class="questionList" id="GeographyQ">
-				<li class="questions" id="un"> Question1
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box geography-correct">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="deux"> Question2
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box geography-correct">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="trois"> Question3
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box geography-correct">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="quatre"> Question4
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box geography-correct">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-			</ol>
-			<input type="submit" class="subButton" id="geographySub">
-		</div>
-		<div class="subjects" id="Science">
-			<h3 class="quizName"> Science quiz:</h3>
-			<ol class="questionList" id="ScienceQ">
-				<li class="questions" id="1"> Question1
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box science-correct">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="2"> Question2
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box science-correct">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="3"> Question3
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box science-correct">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="4"> Question4
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box science-correct">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-			</ol>
-			<input type="submit" class="subButton" id="scienceSub">
-		</div>
-		<div class="subjects" id="History">
-			<h3 class="quizName"> History quiz:</h3>
-			<ol class="questionList" id="HistoryQ">
-				<li class="questions" id="A"> Question1
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box ">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box history-correct">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="B"> Question2
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box history-correct">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="C"> Question3
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box history-correct">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-				<li class="questions" id="D"> Question4
-					<ul>
-						<li class="answers">
-							<input type="checkbox" class="box history-correct">
-							Answer 1
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 2
-						</li>
-						<li class="answers">
-							<input type="checkbox" class="box">
-							Answer 3
-						</li>
-					</ul>
-				</li>
-			</ol>
-			<input type="submit" class="subButton" id="historySub">
-		</div>
-	</div>
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="4"> Which organ in the human body is the largest?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box science-correct">
+								Skin
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Liver
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Brain
+							</li>
+						</ul>
+					</li>
+				</ol>
+				<input type="submit" class="subButton" id="scienceSub">
+			</div>
+			<div class="subjects" id="History">
+				<h3 class="quizName"> History quiz:</h3>
+				<ol class="questionList" id="HistoryQ">
+					<li class="questions" id="A"> Who was the first human to journey into space?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box ">
+								Lance Armstrong
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Neil Armstrong
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box history-correct">
+								Yuri Gagarin
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="B"> What Was the Largest Contiguous Empire in History?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								The British Empire
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								The Roman Empire
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box history-correct">
+								The Mongol Empire.
 
-	<div class="popup">
-		<div class="popup-content">
-			<h1>Your results!
-			</h1>
-			<a id="Home" href="Home.html">Back to Home</a>
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="C"> Which ancient Greek leader conquered Persia?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box history-correct">
+								Alexander the Great
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								King Leonidas
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								Pyrrhus of Epirus
+							</li>
+						</ul>
+					</li>
+					<li class="questions" id="D"> What year did Tunisia gain it's independence?
+						<ul>
+							<li class="answers">
+								<input type="checkbox" class="box history-correct">
+								1956
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								1957
+							</li>
+							<li class="answers">
+								<input type="checkbox" class="box">
+								1950
+							</li>
+						</ul>
+					</li>
+				</ol>
+				<input type="submit" class="subButton" id="historySub">
+			</div>
 		</div>
-	</div>
+
+		<div class="popup">
+			<div class="popup-content">
+				<h1>Your results!
+				</h1>
+				<a id="Home" href="Home.html">Back to Home</a>
+			</div>
+		</div>
 	</div>
 
 	<script src='../jQuery/code.jquery.com_jquery-3.7.0.js'> </script>

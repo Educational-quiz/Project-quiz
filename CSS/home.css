@@ -40,14 +40,14 @@ h3 {
 #leaderbordList {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    
 }
 
 #leaderbordList li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
+    
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     margin: 5px 0;
