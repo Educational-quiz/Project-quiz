@@ -1,5 +1,3 @@
-
-
 $(function () {
   var loginForm = $("#loginForm"); //assign HTML login form to variable loginForm
   var signupForm = $("#signUpForm"); //assign HTML signUp form to variable signupForm
@@ -22,7 +20,7 @@ $(function () {
       geographyScore:0,
       scienceScore:0,
       historyScore:0,
-      totalScore: 0
+      totalScore: null
     };
     var users = getLocalStorageItem("users") || []; //retrives the user data from local storage or set value to empty array if user doesn't exist
     users.push(user); //push our user inside the array
