@@ -106,6 +106,7 @@ $('.subjects').on('click', '.subButton', submitSwitch)
 
 function disableSelected() {
     $(this).attr('disabled', true)
+    $(this).css('background-color', '#f9e7e7')
 }
 
 
