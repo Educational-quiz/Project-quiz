@@ -54,10 +54,13 @@ function getLocalStorageItem(key) {
 
 
 
+
+var bigTotal=0
 var i = 1
 function submitSwitch() {
     var arr = $('.subjects')
-    var ID = getLocalStorageItem('currentUser');
+    var ID = getLocalStorageItem('currentUser')
+
 
     if (i < arr.length && $(this).parent().attr('id') !== (arr[i].id)) {
 
@@ -76,8 +79,15 @@ function submitSwitch() {
         users[ID].historyScore = historyCount + '/40'
         var total = ((mathCount + englishCount + geographyCount + scienceCount + historyCount)/200 )* 100
 
-        if (total > users[ID].totalScore) {
-            users[ID].totalScore = total
+       
+
+        if(bigTotal<total){
+            bigTotal=total
+        }
+    
+        if (bigTotal > users[ID].totalScore) {
+            users[ID].totalScore = bigTotal
+
         }
 
         var json = JSON.stringify(users);
@@ -85,7 +95,10 @@ function submitSwitch() {
 
 
 
-        $('.popup-content').append('<ul><li> Math: ' + users[ID].mathScore + '</li><li> English: ' + users[ID].englishScore + '</li><li> Geography: ' + users[ID].geographyScore + '</li><li> Science: ' + users[ID].scienceScore + '</li><li> History: ' + users[ID].historyScore + '</li><li> Your Total: ' + users[ID].totalScore + '%')
+
+
+        $('.popup-content').append('<ul><li> Math: ' + users[ID].mathScore + '</li><li> English: ' + users[ID].englishScore + '</li><li> Geography: ' + users[ID].geographyScore + '</li><li> Science: ' + users[ID].scienceScore + '</li><li> History: ' + users[ID].historyScore + '</li><li> Your Total: ' + total + '%')
+
 
 
         console.log(mathCount)
@@ -103,6 +116,9 @@ $('.subjects').on('click', '.subButton', submitSwitch)
 
 function disableSelected() {
     $(this).attr('disabled', true)
+
+    $(this).css('background-color', '#f9e7e7')
+
 }
 
 
