@@ -53,11 +53,14 @@ function getLocalStorageItem(key) {
 }
 
 
-var bigTotal=0
+
+
+var bigTotal = 0
 var i = 1
 function submitSwitch() {
     var arr = $('.subjects')
     var ID = getLocalStorageItem('currentUser')
+
 
     if (i < arr.length && $(this).parent().attr('id') !== (arr[i].id)) {
 
@@ -69,26 +72,37 @@ function submitSwitch() {
     else {
         $('.popup').fadeIn('slow')
 
+
+        users[ID].historyScore = historyCount + '/40'
         users[ID].mathScore = mathCount + '/40'
         users[ID].englishScore = englishCount + '/40'
         users[ID].geographyScore = geographyCount + '/40'
         users[ID].scienceScore = scienceCount + '/40'
-        users[ID].historyScore = historyCount + '/40'
-        var total = ((mathCount + englishCount + geographyCount + scienceCount + historyCount)/200 )* 100
-        if(bigTotal<total){
-            bigTotal=total
+        
+        var total = ((mathCount + englishCount + geographyCount + scienceCount + historyCount) / 200) * 100
+
+
+
+        if (bigTotal < total) {
+            bigTotal = total
         }
-    
+
         if (bigTotal > users[ID].totalScore) {
             users[ID].totalScore = bigTotal
+
         }
 
         var json = JSON.stringify(users);
         window.localStorage.setItem("users", json);
 
+        console.log(users[ID].historyScore)
+
+
+
 
 
         $('.popup-content').append('<ul><li> Math: ' + users[ID].mathScore + '</li><li> English: ' + users[ID].englishScore + '</li><li> Geography: ' + users[ID].geographyScore + '</li><li> Science: ' + users[ID].scienceScore + '</li><li> History: ' + users[ID].historyScore + '</li><li> Your Total: ' + total + '%')
+
 
 
         console.log(mathCount)
@@ -102,16 +116,21 @@ function submitSwitch() {
 }
 
 
-$('.subjects').on('click', '.subButton', submitSwitch)
+$('.tabcontent').on('click', '.subButton', submitSwitch)
 
 function disableSelected() {
     $(this).attr('disabled', true)
+
+    $(this).css('background-color', '#f9e7e7')
+
+
 }
 
 
 $('.tablinks').on('click', disableSelected)
 
 $('.subButton').attr('disabled', true)
+$('.subButton').css('cursor', 'not-allowed')
 
 
 $('.subjects').on('click', '.box', function checkChecks() {
@@ -119,6 +138,16 @@ $('.subjects').on('click', '.box', function checkChecks() {
     var subID2 = subID.toLowerCase()
     if ($('#' + subID + ' .box:checked').length === 4) {
         $('#' + subID2 + 'Sub').attr('disabled', false)
+        $('#' + subID2 + 'Sub').css('cursor', 'pointer')
+        $('#' + subID2 + 'Sub').hover(function(){
+            $(this).css("background-color", "#f74065");
+            }, function(){
+            $(this).css("background-color", "pink");
+          });
+        
+
+
+
     }
 
 
@@ -142,26 +171,26 @@ $('.subjects').on('click', '.subButton', function () {
     var scienceChecks = $('.science-correct').filter(':checked').length
     var historyChecks = $('.history-correct').filter(':checked').length
 
-    
-      if ($(this).attr('id')==='mathSub'){
-    mathCount = forLoop(mathChecks, mathCount)
-      }
-       if ($(this).attr('id')==='englishSub'){
-    englishCount = forLoop(englishChecks, englishCount)
-      }
-      if ($(this).attr('id')==='geographySub'){
-    geographyCount = forLoop(geographyChecks, geographyCount)
-      }
-      if ($(this).attr('id')==='scienceSub'){
-   scienceCount = forLoop(scienceChecks, scienceCount)
-      }
-      if ($(this).attr('id')==='historySub'){
-   historyCount = forLoop(historyChecks, historyCount)
-      }
 
-    console.log(mathCount,englishCount,geographyCount,scienceCount,historyCount)
+    if ($(this).attr('id') === 'mathSub') {
+        mathCount = forLoop(mathChecks, mathCount)
+    }
+    if ($(this).attr('id') === 'englishSub') {
+        englishCount = forLoop(englishChecks, englishCount)
+    }
+    if ($(this).attr('id') === 'geographySub') {
+        geographyCount = forLoop(geographyChecks, geographyCount)
+    }
+    if ($(this).attr('id') === 'scienceSub') {
+        scienceCount = forLoop(scienceChecks, scienceCount)
+    }
+    if ($(this).attr('id') === 'historySub') {
+        historyCount = forLoop(historyChecks, historyCount)
+    }
 
-    
+    console.log(mathCount, englishCount, geographyCount, scienceCount, historyCount)
+
+
 
 
 })
