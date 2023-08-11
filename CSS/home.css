@@ -7,9 +7,7 @@ html, body {
 }
 .full-screen {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row-reverse; /* Reversed direction to put the leaderboard on the right */
     background-image: url("../images/background1.jpg");
     height: 100vh;
     width: 100vw;
@@ -30,6 +28,14 @@ button {
 button:hover {
     background-color: #36589e;
 }
+#logoutButton {
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 40px;
+    width: 120px;
+    font-size: 14px;
+}
 h3 {
     color: #fff;
     font-size: 24px;
@@ -38,22 +44,57 @@ h3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 #leaderbordList {
-    list-style: none;
     padding: 0;
-    
+    margin: 20px 0;
 }
 
 #leaderbordList li {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 5px 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     margin: 5px 0;
-}
+    color: #d4af37;
+    font-weight: bold;
+    font-size:25px;
+}   
 
 #leaderbordList li span {
     font-weight: bold;
     margin-right: 10px;
+    
+}
+.quiz-section,
+.leaderboard-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 250px;
+}
+.quiz-section,
+.logout,
+.leaderboard-section {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.quiz-section h1,
+.leaderboard-section h1 {
+    margin-bottom: 10px;
+    font-size:50px;
+    font-style: italic;
+}
+
+.quiz-section p {
+    margin-bottom: 20px;
+}
+
+#leaderbordList li::marker {
+    color:#f9e7e7
 }
